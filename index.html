@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perufarma S.A. - Presentación S&OP de Red Sincrónica</title>
+    <title>Perufarma S.A. - Plan de Transformación Digital SCM (Agente AI)</title>
     <!-- Tailwind CSS para el diseño -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons para la iconografía -->
@@ -28,6 +28,11 @@
             background-color: #1e293b;
             color: #e2e8f0;
         }
+        .scor-tab.active {
+            background-color: #4f46e5;
+            color: #ffffff;
+            border-color: #4f46e5;
+        }
     </style>
 </head>
 <body class="text-slate-200 min-h-screen flex flex-col overflow-hidden">
@@ -38,11 +43,11 @@
             <h1 class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400 tracking-tight">
                 PERUFARMA S.A. - ESTRATEGIA DIGITAL SCM
             </h1>
-            <p class="text-slate-400 text-xs tracking-widest uppercase mt-1">Orquestación de Red Sincrónica S&OP para Marcas Representadas (Cuidado Personal, Consumo y Licores)</p>
+            <p class="text-slate-400 text-xs tracking-widest uppercase mt-1">Implementación de Agente AI para la Sincronización S&OP de Marcas Representadas</p>
         </div>
         <div class="hidden md:flex items-center space-x-2 text-slate-300 bg-slate-800 px-4 py-2 rounded-full border border-slate-700">
-            <i data-lucide="activity" class="w-4 h-4 text-emerald-400 animate-pulse"></i>
-            <span class="text-sm font-semibold text-slate-300">Nivel de Madurez 4: Predictivo</span>
+            <i data-lucide="cpu" class="w-4 h-4 text-emerald-400 animate-pulse"></i>
+            <span class="text-sm font-semibold text-slate-300">Agente AI Integrado (S&OP)</span>
         </div>
     </header>
 
@@ -50,36 +55,42 @@
     <div class="flex flex-1 overflow-hidden">
         
         <!-- Menú Lateral Izquierdo (Slide Deck Index) -->
-        <aside class="w-72 bg-slate-900 border-r border-slate-800 hidden md:flex flex-col py-6 shadow-xl flex-shrink-0">
+        <aside class="w-80 bg-slate-900 border-r border-slate-800 hidden md:flex flex-col py-6 shadow-xl flex-shrink-0">
             <div class="px-6 mb-4">
-                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Estructura Corporativa</h3>
+                <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Plan de Proyecto</h3>
             </div>
             <nav class="flex-1 space-y-1 px-3 overflow-y-auto" id="sidebar-nav">
-                <button onclick="goToSlide(0)" class="nav-button active w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="target" class="w-4 h-4 mr-2"></i> 1. Visión y Propuesta de Valor
+                <button onclick="goToSlide(0)" class="nav-button active w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="presentation" class="w-4 h-4 mr-2"></i> 1. Resumen Ejecutivo
                 </button>
-                <button onclick="goToSlide(1)" class="nav-button w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="layers" class="w-4 h-4 mr-2"></i> 2. Arquitectura del Ecosistema AI
+                <button onclick="goToSlide(1)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="target" class="w-4 h-4 mr-2"></i> 2. Visión Sincrónica & Retos
                 </button>
-                <button onclick="goToSlide(2)" class="nav-button w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="map" class="w-4 h-4 mr-2"></i> 3. Descentralización Multi-CD
+                <button onclick="goToSlide(2)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="cpu" class="w-4 h-4 mr-2"></i> 3. Potencialidades del Agente AI
                 </button>
-                <button onclick="goToSlide(3)" class="nav-button w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="bar-chart-3" class="w-4 h-4 mr-2"></i> 4. Optimización Financiera
+                <button onclick="goToSlide(3)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="git-merge" class="w-4 h-4 mr-2"></i> 4. Fases de Implementación TI
                 </button>
-                <button onclick="goToSlide(4)" class="nav-button w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i> 5. Indicadores de Servicio (OTIF)
+                <button onclick="goToSlide(4)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="activity" class="w-4 h-4 mr-2"></i> 5. Impacto bajo Modelo SCOR
                 </button>
-                <button onclick="goToSlide(5)" class="nav-button w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="git-pull-request" class="w-4 h-4 mr-2"></i> 6. Modelo Lean Rebalancing
+                <button onclick="goToSlide(5)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="map" class="w-4 h-4 mr-2"></i> 6. Descentralización CD Regional
                 </button>
-                <button onclick="goToSlide(6)" class="nav-button w-full text-left px-4 py-2.5 rounded-lg text-xs font-semibold flex items-center transition-all">
-                    <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 7. Roadmap de Evolución SCM
+                <button onclick="goToSlide(6)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="bar-chart-3" class="w-4 h-4 mr-2"></i> 7. Optimización de Capital
+                </button>
+                <button onclick="goToSlide(7)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="refresh-cw" class="w-4 h-4 mr-2"></i> 8. Lógica Lean Rebalancing
+                </button>
+                <button onclick="goToSlide(8)" class="nav-button w-full text-left px-4 py-2 rounded-lg text-xs font-semibold flex items-center transition-all">
+                    <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 9. Presupuesto & Roadmap
                 </button>
             </nav>
             <div class="px-4 mt-auto">
                 <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-center">
-                    <p class="text-[11px] text-slate-500">Diseñado para la Gerencia de Operaciones - Perufarma S.A.</p>
+                    <p class="text-[11px] text-slate-500">Comité de Dirección S&OP - Perufarma S.A.</p>
                 </div>
             </div>
         </aside>
@@ -90,75 +101,202 @@
             
             <div class="max-w-4xl mx-auto w-full relative z-10">
                 
-                <!-- Diapositiva 1: Visión -->
+                <!-- Diapositiva 1: Resumen Ejecutivo -->
                 <div id="slide-0" class="slide-content active">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 01 // Estrategia de Negocio</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6 flex items-center">
-                        Estrategia S&OP Sincrónica para Perufarma S.A.
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 01 // Estrategia</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6">
+                        Sincronización Digital SCM para Perufarma S.A.
                     </h2>
                     <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8 border-l-4 border-indigo-500 pl-4">
-                        Como distribuidor líder multimarca en el Perú, **Perufarma S.A.** enfrenta la alta complejidad de abastecer diferentes canales de venta (Supermercados, Farmacias y Tradicional). Al migrar de una planificación reactiva a un **modelo sincrónico impulsado por IA**, unificamos stocks, tránsitos y volatilidad para asegurar el abastecimiento de portafolios estratégicos como la línea de cuidado capilar de *Every Strand* o licores de alta gama.
+                        Perufarma S.A. gestiona un portafolio complejo con altos estándares de servicio exigidos por supermercados y farmacias del país. Esta propuesta de negocio presenta la **implementación de un Agente AI** para transformar nuestro proceso S&OP, optimizando el capital de trabajo de marcas representadas (como el cuidado capilar de *Every Strand*) y asegurando el Fill Rate a nivel nacional.
                     </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-lg">
-                            <h4 class="text-white font-bold text-base flex items-center mb-2"><i data-lucide="shield" class="w-5 h-5 mr-2 text-emerald-400"></i> Blindaje del Fill Rate</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">Cálculo de inventarios de seguridad dinámicos para compensar las demoras de importación y aduanas, protegiendo las góndolas de retail.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start">
+                            <div class="bg-emerald-500/10 p-3 rounded-xl mr-4 text-emerald-400"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Protección de Ingresos</h4>
+                                <p class="text-slate-400 text-xs mt-1">Evitamos rupturas de stock en puntos clave de venta para garantizar el flujo continuo de facturación en canales modernos.</p>
+                            </div>
                         </div>
-                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-lg">
-                            <h4 class="text-white font-bold text-base flex items-center mb-2"><i data-lucide="refresh-cw" class="w-5 h-5 mr-2 text-amber-400"></i> Eficiencia del TCO</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">Reducción del costo total de propiedad liberando capital atrapado en sobrestock y disminuyendo mermas por obsolescencia/vencimiento.</p>
-                        </div>
-                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-lg">
-                            <h4 class="text-white font-bold text-base flex items-center mb-2"><i data-lucide="sliders" class="w-5 h-5 mr-2 text-blue-400"></i> Control Descentralizado</h4>
-                            <p class="text-slate-400 text-xs leading-relaxed">Asignación estructurada de responsabilidades a planners según familias de marcas (Cosmética, Consumo, Licores), agilizando la toma de decisiones.</p>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start">
+                            <div class="bg-indigo-500/10 p-3 rounded-xl mr-4 text-indigo-400"><i data-lucide="piggy-bank" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Liberación de Caja (Cash Release)</h4>
+                                <p class="text-slate-400 text-xs mt-1">Ajustamos dinámicamente los buffers de inventario para liberar capital de trabajo atrapado en mermas o sobrestocks provinciales.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Diapositiva 2: Arquitectura -->
+                <!-- Diapositiva 2: El Reto y la Sincronía -->
                 <div id="slide-1" class="slide-content">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 02 // Tecnología y ERP</span>
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 02 // El Diagnóstico</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6">
-                        Conectando la Data Corporativa de Perufarma S.A.
+                        Desafíos de la Distribución Multimarca en Perú
                     </h2>
-                    <p class="text-slate-400 text-sm mb-6">Integración del core logístico unificando de manera transparente 7 fuentes de datos transaccionales, libre de procesos manuales propensos a errores.</p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <div class="bg-slate-900 border border-slate-800 p-4 rounded-lg flex items-start">
-                                <div class="bg-indigo-500/10 p-2 rounded-lg mr-3"><i data-lucide="database" class="w-5 h-5 text-indigo-400"></i></div>
-                                <div>
-                                    <h4 class="text-white font-bold text-sm">Extracción desde ERP Corporativo</h4>
-                                    <p class="text-slate-400 text-xs mt-1">El motor de IA absorbe e integra los datos del ERP de Perufarma (maestros de SKUs, stock disponible, consumos internos e históricos de venta de 18 meses).</p>
-                                </div>
-                            </div>
-                            <div class="bg-slate-900 border border-slate-800 p-4 rounded-lg flex items-start">
-                                <div class="bg-emerald-500/10 p-2 rounded-lg mr-3"><i data-lucide="check-square" class="w-5 h-5 text-emerald-400"></i></div>
-                                <div>
-                                    <h4 class="text-white font-bold text-sm">Validación Dinámica y Robustez</h4>
-                                    <p class="text-slate-400 text-xs mt-1">Se implementó un mapeador inteligente de esquemas que previene fallos por cambios de formato o cabeceras (sinónimos automáticos de familias/categorías).</p>
-                                </div>
-                            </div>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Perufarma compite en un entorno logístico complejo caracterizado por la variabilidad de importaciones y la exigencia de penalizaciones (fill rate) por parte de las cadenas de retail.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md">
+                            <div class="text-rose-400 text-3xl font-extrabold mb-2">S/. 1.2M</div>
+                            <h4 class="text-white font-bold text-sm">Venta en Riesgo Latente</h4>
+                            <p class="text-slate-400 text-xs mt-2">Pérdida de ventas acumulada en los CDs locales debido a descoordinaciones de tiempos de importación aduanera.</p>
                         </div>
-                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl text-center relative">
-                            <div class="text-xs uppercase font-bold tracking-wider text-slate-500 mb-4">Pipeline de Procesamiento S&OP</div>
-                            <div class="bg-slate-800 border border-slate-700 p-3 rounded text-xs font-semibold">Inputs Locales (CSV / Google Drive)</div>
-                            <div class="w-0.5 h-6 bg-indigo-500 mx-auto"></div>
-                            <div class="bg-indigo-600 p-3 rounded font-bold text-xs text-white shadow-lg shadow-indigo-500/10">Motor de Inteligencia de Red (Python)</div>
-                            <div class="w-0.5 h-6 bg-indigo-500 mx-auto"></div>
-                            <div class="bg-slate-800 border border-slate-700 p-3 rounded text-xs font-semibold text-emerald-400">Torre de Control Interactiva Perufarma</div>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md">
+                            <div class="text-amber-400 text-3xl font-extrabold mb-2">25%</div>
+                            <h4 class="text-white font-bold text-sm">Error de Pronóstico (MAPE)</h4>
+                            <p class="text-slate-400 text-xs mt-2">Dificultad de los planificadores para predecir de forma exacta la demanda local y estacional de productos de belleza.</p>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md">
+                            <div class="text-blue-400 text-3xl font-extrabold mb-2">S/. 850K</div>
+                            <h4 class="text-white font-bold text-sm">Capital en Sobrestock</h4>
+                            <p class="text-slate-400 text-xs mt-2">Inventario inmovilizado y propenso a mermas por vencimiento debido a una mala distribución regional de buffers.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Diapositiva 3: Multi-CD -->
+                <!-- Diapositiva 3: Potencialidades del Agente AI -->
                 <div id="slide-2" class="slide-content">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 03 // Distribución Nacional</span>
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 03 // Capacidades SCM</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6">
-                        Descentralización de Red en Tres Regiones Clave
+                        ¿Por qué un Agente AI en lugar de BI Estático?
                     </h2>
-                    <p class="text-slate-300 text-sm mb-6 leading-relaxed font-normal">
-                        Para lograr una distribución ágil en el Perú, el inventario debe analizarse por nodo de consumo. Rompemos la consolidación global para enfocar la Torre de Control en las dinámicas logísticas regionales de Perufarma.
+                    <p class="text-slate-400 text-sm mb-6">A diferencia de un dashboard de Power BI tradicional (que solo muestra datos históricos pasados), el Agente AI razona, prescribe planes de acción y automatiza tareas.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start">
+                            <div class="bg-indigo-500/10 p-3 rounded-lg mr-4 text-indigo-400"><i data-lucide="brain" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Análisis Cognitivo y Tolerancia</h4>
+                                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Entiende variaciones semánticas en la data. No requiere que tus CSVs de Perufarma estén perfectamente limpios; el agente los unifica de forma inteligente.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start">
+                            <div class="bg-amber-500/10 p-3 rounded-lg mr-4 text-amber-400"><i data-lucide="navigation" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Capacidad Prescriptiva de Red</h4>
+                                <p class="text-slate-400 text-xs mt-1 leading-relaxed">No solo avisa del quiebre; calcula y prescribe la transferencia exacta de inventario (rebalanceo) más eficiente entre Lurín, Arequipa y Trujillo.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start">
+                            <div class="bg-emerald-500/10 p-3 rounded-lg mr-4 text-emerald-400"><i data-lucide="mail" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Delegación Descentralizada</h4>
+                                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Agrupa los códigos desprotegidos por el planner responsable de la marca y dispara alertas directas con el cuadro resumen por correo.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl flex items-start">
+                            <div class="bg-blue-500/10 p-3 rounded-lg mr-4 text-blue-400"><i data-lucide="lock" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Seguridad Local en VS Code</h4>
+                                <p class="text-slate-400 text-xs mt-1 leading-relaxed">El código corre de manera segura en la red interna de Perufarma. La información de compras y ventas nunca sale de tu servidor local.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 4: Fases de Implementación -->
+                <div id="slide-3" class="slide-content">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 04 // Cronograma TI</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-8">
+                        Fases del Proyecto de TI como Agente AI
+                    </h2>
+                    
+                    <div class="relative border-l border-slate-800 ml-6 space-y-10 pb-4">
+                        <!-- Fase 1 -->
+                        <div class="relative pl-8">
+                            <div class="absolute w-5 h-5 bg-emerald-500 rounded-full -left-[11px] top-1 shadow-[0_0_15px_rgba(16,185,129,0.5)] border-4 border-slate-950 flex items-center justify-center">
+                                <i data-lucide="check" class="w-3 h-3 text-white"></i>
+                            </div>
+                            <span class="text-emerald-400 text-[10px] font-bold uppercase tracking-widest bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Fase 01 // COMPLETADO</span>
+                            <h4 class="text-sm font-bold text-white mt-1">Conectividad, Sincronización y Visibilidad (S&OP)</h4>
+                            <p class="text-slate-400 text-xs mt-1 leading-relaxed">Lógica transaccional unificada desde los 7 archivos CSV reales, Torre de Control HTML Multi-CD interactiva con filtros locales y módulo de correo descentralizado para los planners.</p>
+                        </div>
+                        <!-- Fase 2 -->
+                        <div class="relative pl-8">
+                            <div class="absolute w-5 h-5 bg-indigo-500 rounded-full -left-[11px] top-1 shadow-[0_0_15px_rgba(99,102,241,0.5)] border-4 border-slate-950 animate-pulse"></div>
+                            <span class="text-indigo-400 text-[10px] font-bold uppercase tracking-widest bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">Fase 02 // PROPUESTA</span>
+                            <h4 class="text-sm font-bold text-white mt-1">Sourcing Predictivo & Negociación (Q3 2026)</h4>
+                            <p class="text-slate-400 text-xs mt-1 leading-relaxed">Desarrollo de la Matriz Kraljic dinámica para compras internacionales, Spend Analysis de proveedores para optimizar fletes y modelos de Machine Learning para predecir demanda estacional.</p>
+                        </div>
+                        <!-- Fase 3 -->
+                        <div class="relative pl-8 opacity-50">
+                            <div class="absolute w-5 h-5 bg-slate-600 rounded-full -left-[11px] top-1 border-4 border-slate-950"></div>
+                            <span class="text-slate-400 text-[10px] font-bold uppercase tracking-widest bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Fase 03 // LARGO PLAZO</span>
+                            <h4 class="text-sm font-bold text-white mt-1">Ejecución Autónoma Integrada al ERP (Q1 2027)</h4>
+                            <p class="text-slate-400 text-xs mt-1 leading-relaxed">Migración del MRP tradicional a Demand Driven MRP (DDMRP). Gatillado automático de órdenes de transferencia inter-CD y propuestas de OC al exterior mediante API.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 5: Modelo SCOR -->
+                <div id="slide-4" class="slide-content">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 05 // Estándar SCOR</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-4">
+                        Mapeo de Impacto en el Modelo SCOR
+                    </h2>
+                    <p class="text-slate-400 text-xs mb-6">Objetivos cuantificables y realistas para la operación logística de Perufarma S.A. Selecciona un pilar:</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-6" id="scor-tabs">
+                        <button onclick="switchScor('plan')" class="scor-tab active border border-slate-700 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all">PLAN (Planificación)</button>
+                        <button onclick="switchScor('source')" class="scor-tab border border-slate-700 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all">SOURCE (Abastecimiento)</button>
+                        <button onclick="switchScor('deliver')" class="scor-tab border border-slate-700 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all">DELIVER (Distribución)</button>
+                        <button onclick="switchScor('return')" class="scor-tab border border-slate-700 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all">RETURN (Devoluciones)</button>
+                        <button onclick="switchScor('enable')" class="scor-tab border border-slate-700 px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all">ENABLE (Habilitadores)</button>
+                    </div>
+
+                    <!-- Contenidos de SCOR -->
+                    <div id="scor-content-plan" class="scor-desc bg-slate-900 border border-slate-800 p-6 rounded-xl">
+                        <h4 class="text-indigo-400 font-bold text-lg mb-2">Pilar SCOR: PLAN (Planificación S&OP)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Sincroniza los pronósticos de venta con la capacidad real de almacenamiento, alineando comercial y operaciones.</p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-4 text-xs">
+                            <div><span class="text-slate-500 block uppercase font-semibold">KPI Clave</span><strong class="text-white text-sm">Error de Pronóstico (MAPE)</strong></div>
+                            <div><span class="text-slate-500 block uppercase font-semibold">Meta Realista</span><strong class="text-emerald-400 text-sm">Reducción de 25% a 12%</strong></div>
+                        </div>
+                    </div>
+                    <div id="scor-content-source" class="scor-desc bg-slate-900 border border-slate-800 p-6 rounded-xl hidden">
+                        <h4 class="text-indigo-400 font-bold text-lg mb-2">Pilar SCOR: SOURCE (Abastecimiento)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Gestión activa de compras internacionales a representadas. Buffers calculados dinámicamente según variabilidad real de aduanas y navieras.</p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-4 text-xs">
+                            <div><span class="text-slate-500 block uppercase font-semibold">KPI Clave</span><strong class="text-white text-sm">OTIF de Proveedores Real</strong></div>
+                            <div><span class="text-slate-500 block uppercase font-semibold">Meta Realista</span><strong class="text-emerald-400 text-sm">Incremento de 78% a 92%</strong></div>
+                        </div>
+                    </div>
+                    <div id="scor-content-deliver" class="scor-desc bg-slate-900 border border-slate-800 p-6 rounded-xl hidden">
+                        <h4 class="text-indigo-400 font-bold text-lg mb-2">Pilar SCOR: DELIVER (Distribución & Logística)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Asegurar la entrega perfecta del producto en los almacenes de los supermercados y farmacias del país para evitar penalizaciones contractuales.</p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-4 text-xs">
+                            <div><span class="text-slate-500 block uppercase font-semibold">KPI Clave</span><strong class="text-white text-sm">OTIF de Perufarma a Retailers</strong></div>
+                            <div><span class="text-slate-500 block uppercase font-semibold">Meta Realista</span><strong class="text-emerald-400 text-sm">Incremento de 84% a 96%</strong></div>
+                        </div>
+                    </div>
+                    <div id="scor-content-return" class="scor-desc bg-slate-900 border border-slate-800 p-6 rounded-xl hidden">
+                        <h4 class="text-indigo-400 font-bold text-lg mb-2">Pilar SCOR: RETURN (Logística Inversa)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Mitigación del costo por devoluciones y destrucción de productos de consumo/belleza debido a sobrestocks provinciales vencidos.</p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-4 text-xs">
+                            <div><span class="text-slate-500 block uppercase font-semibold">KPI Clave</span><strong class="text-white text-sm">Pérdida por Mermas y Vencidos</strong></div>
+                            <div><span class="text-slate-500 block uppercase font-semibold">Meta Realista</span><strong class="text-emerald-400 text-sm">Reducción del 35% del costo</strong></div>
+                        </div>
+                    </div>
+                    <div id="scor-content-enable" class="scor-desc bg-slate-900 border border-slate-800 p-6 rounded-xl hidden">
+                        <h4 class="text-indigo-400 font-bold text-lg mb-2">Pilar SCOR: ENABLE (Habilitadores TI)</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">Liberación de actividades operativas repetitivas de baja escala para enfocar el talento humano en tareas puramente estratégicas de negociación.</p>
+                        <div class="grid grid-cols-2 gap-4 border-t border-slate-800 pt-4 text-xs">
+                            <div><span class="text-slate-500 block uppercase font-semibold">KPI Clave</span><strong class="text-white text-sm">Tiempo Operativo de Planner</strong></div>
+                            <div><span class="text-slate-500 block uppercase font-semibold">Meta Realista</span><strong class="text-emerald-400 text-sm">Liberación del 45% del tiempo</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 6: Descentralización Multi-CD -->
+                <div id="slide-5" class="slide-content">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 06 // Distribución Regional</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6">
+                        Descentralización Multi-CD de Perufarma
+                    </h2>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Para lograr una distribución ágil, el stock debe analizarse por punto geográfico. Rompemos la consolidación macro para evaluar la disponibilidad de manera aislada en cada nodo.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-slate-900 border-l-4 border-l-indigo-500 p-5 rounded-r-xl border border-y-slate-800 border-r-slate-800">
@@ -176,13 +314,13 @@
                     </div>
                 </div>
 
-                <!-- Diapositiva 4: Optimización Financiera -->
-                <div id="slide-3" class="slide-content">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 04 // Control Financiero</span>
+                <!-- Diapositiva 7: Optimización Financiera -->
+                <div id="slide-6" class="slide-content">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 07 // Retornos de Negocio</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-2">
                         Optimización Financiera y Capital de Trabajo
                     </h2>
-                    <p class="text-slate-400 text-xs mb-6">Impacto directo de las decisiones de SCM en la rentabilidad y flujo de caja de Perufarma S.A.</p>
+                    <p class="text-slate-400 text-xs mb-6">Impacto directo de las decisiones de SCM en la rentabilidad de las marcas representadas.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md">
@@ -225,50 +363,21 @@
                     </div>
                 </div>
 
-                <!-- Diapositiva 5: OTIF -->
-                <div id="slide-4" class="slide-content">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 05 // Desempeño en Retail</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-2">
-                        Garantizando el OTIF en Clientes de Canal Moderno
-                    </h2>
-                    <p class="text-slate-400 text-xs mb-6">Aumento en el cumplimiento con supermercados (Plaza Vea, Wong, Tottus) y farmacias (Inkafarma, Mifarma) mediante la estabilización analítica del portafolio.</p>
-                    
-                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl shadow-lg">
-                        <div class="relative h-40 w-full bg-slate-950/50 p-4 rounded-lg border border-slate-800">
-                            <svg viewBox="0 0 400 120" class="w-full h-full overflow-visible">
-                                <line x1="0" y1="20" x2="400" y2="20" stroke="#1e293b" stroke-width="1" stroke-dasharray="4" />
-                                <line x1="0" y1="60" x2="400" y2="60" stroke="#1e293b" stroke-width="1" stroke-dasharray="4" />
-                                <line x1="0" y1="100" x2="400" y2="100" stroke="#1e293b" stroke-width="1" stroke-dasharray="4" />
-                                
-                                <polyline fill="none" stroke="#ef4444" stroke-width="2" points="0,90 80,95 160,88 240,92 320,95 400,90" />
-                                <polyline fill="none" stroke="#10b981" stroke-width="3" points="0,90 80,70 160,50 240,30 320,18 400,8" />
-                                
-                                <circle cx="400" cy="8" r="4" fill="#10b981" />
-                                <text x="340" y="-2" fill="#10b981" font-size="10" font-weight="bold">98% OTIF Objetivo</text>
-                                <text x="340" y="115" fill="#ef4444" font-size="10">82% OTIF Tradicional</text>
-                            </svg>
-                        </div>
-                        <div class="flex justify-between mt-3 text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-                            <span>Mes 1</span><span>Mes 2</span><span>Mes 3</span><span>Mes 4</span><span>Mes 5</span><span class="text-indigo-400">Mes 6 (Objetivo)</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Diapositiva 6: Lean Rebalancing -->
-                <div id="slide-5" class="slide-content">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 06 // Eficiencia de Distribución</span>
+                <!-- Diapositiva 8: Lean Rebalancing -->
+                <div id="slide-7" class="slide-content">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 08 // Eficiencia de Distribución</span>
                     <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6">
-                        Modelo Prescriptivo: Lean Rebalancing Interprovincial ⚡
+                        Modelo Prescriptivo: Lean Rebalancing ⚡
                     </h2>
                     <p class="text-slate-300 text-sm mb-6 leading-relaxed">
-                        El motor analítico de Perufarma optimiza el inventario de forma prescriptiva. Al detectar quiebres en CD Trujillo o CD Arequipa y sobrestocks en CD Lurín, el sistema gatilla propuestas automáticas de transferencia inter-CD, amortiguando la demanda.
+                        El motor analítico de Perufarma optimiza el inventario de forma prescriptiva. Al detectar quiebres locales y sobrestocks en otros CDs, el sistema gatilla propuestas automáticas de transferencia interprovincial.
                     </p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md flex items-start">
                             <div class="bg-emerald-500/10 p-3 rounded-xl mr-4 text-emerald-400"><i data-lucide="arrow-down-left" class="w-6 h-6"></i></div>
                             <div>
                                 <h4 class="text-white font-bold text-base">Eliminación de Costo Comercial</h4>
-                                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Se aprovecha el inventario excedente en la red, evitando la colocación de órdenes de compra spot de emergencia al extranjero.</p>
+                                <p class="text-slate-400 text-xs mt-1 leading-relaxed">Se aprovecha el inventario excedente de la propia red de Perufarma S.A., evitando la colocación de órdenes de compra spot de emergencia al extranjero.</p>
                             </div>
                         </div>
                         <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md flex items-start">
@@ -281,27 +390,31 @@
                     </div>
                 </div>
 
-                <!-- Diapositiva 7: Roadmap -->
-                <div id="slide-6" class="slide-content">
-                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 07 // Futuro y Estrategia</span>
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-8">
-                        Roadmap de Madurez Logística SCM
+                <!-- Diapositiva 9: Presupuesto y Toma de Decisiones -->
+                <div id="slide-8" class="slide-content">
+                    <span class="text-indigo-400 text-xs font-bold uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">Sección 09 // Next Steps</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-white mt-4 mb-6">
+                        Aprobación de Fase 2 y Retornos del Proyecto
                     </h2>
-                    <div class="relative border-l border-slate-800 ml-4 space-y-8 pb-4">
-                        <div class="relative pl-6">
-                            <div class="absolute w-3 h-3 bg-emerald-500 rounded-full -left-[6px] top-1.5 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
-                            <h4 class="text-sm font-bold text-emerald-400">FASE 1: Visibilidad Multi-CD e Inteligencia de Red (COMPLETADO)</h4>
-                            <p class="text-slate-400 text-xs mt-1">Sincronización de bases transaccionales, Torre de Control interactiva por CD, alertas descentralizadas a planners y auditoría de OTIF de proveedores.</p>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Habiendo culminado exitosamente la Fase 1 de integración y Torre de Control local, solicitamos la aprobación para el desarrollo de la **Fase 2 de Sourcing Predictivo**.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide border-b border-slate-800 pb-2 mb-3">Requerimientos de TI (Fase 2)</h4>
+                            <ul class="text-xs text-slate-400 space-y-2">
+                                <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-indigo-400 mr-2"></i> Desarrollo de Algoritmos de Machine Learning</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-indigo-400 mr-2"></i> Integración del módulo de Matriz Kraljic</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-indigo-400 mr-2"></i> 40 Horas de Ingeniería y pruebas locales</li>
+                            </ul>
                         </div>
-                        <div class="relative pl-6">
-                            <div class="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-1.5 shadow-[0_0_8px_rgba(99,102,241,0.5)] animate-pulse"></div>
-                            <h4 class="text-sm font-bold text-indigo-400">FASE 2: Strategic Sourcing & Pronósticos ML (Q3 2026)</h4>
-                            <p class="text-slate-400 text-xs mt-1">Implementación de la Matriz Kraljic para optimizar importaciones y desarrollo de algoritmos de Machine Learning para predecir demanda estacional.</p>
-                        </div>
-                        <div class="relative pl-6 opacity-50">
-                            <div class="absolute w-3 h-3 bg-slate-600 rounded-full -left-[6px] top-1.5"></div>
-                            <h4 class="text-sm font-bold text-slate-400">FASE 3: Ejecución Autónoma e Integración ERP (Q1 2027)</h4>
-                            <p class="text-slate-400 text-xs mt-1">Gatillado autónomo de órdenes de transferencia inter-CD y propuestas automáticas de compra al exterior basadas en buffers inteligentes.</p>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl shadow-md">
+                            <h4 class="text-white font-bold text-sm uppercase tracking-wide border-b border-slate-800 pb-2 mb-3">Beneficios Financieros Esperados</h4>
+                            <ul class="text-xs text-slate-400 space-y-2">
+                                <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 text-emerald-400 mr-2"></i> Retorno de Inversión (Payback) en menos de 4 meses</li>
+                                <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 text-emerald-400 mr-2"></i> Liberación estimada de S/. 640K en capital atrapado</li>
+                                <li class="flex items-center"><i data-lucide="trending-up" class="w-4 h-4 text-emerald-400 mr-2"></i> Reducción de 35% en penalizaciones de fill rate</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -310,16 +423,18 @@
         </main>
     </div>
 
-    <!-- Controles de Navegación Inferior (Móvil e Interfaz Global) -->
+    <!-- Controles de Navegación Inferior -->
     <footer class="bg-slate-900 border-t border-slate-800 p-4 flex justify-between items-center flex-shrink-0 z-20">
         <button onclick="prevSlide()" id="btn-prev" class="px-5 py-2 bg-slate-800 text-slate-300 rounded-lg text-xs font-bold uppercase tracking-wider disabled:opacity-40 transition-opacity">
             Anterior
         </button>
         <div class="md:hidden text-slate-400 text-xs font-bold uppercase tracking-widest">
-            Slide <span id="mobile-counter">1</span> / 7
+            Slide <span id="mobile-counter">1</span> / 9
         </div>
         <div class="hidden md:flex space-x-1 text-slate-600 text-xs font-bold">
             <span class="slide-indicator text-indigo-400">■</span>
+            <span class="slide-indicator">■</span>
+            <span class="slide-indicator">■</span>
             <span class="slide-indicator">■</span>
             <span class="slide-indicator">■</span>
             <span class="slide-indicator">■</span>
@@ -338,7 +453,7 @@
         lucide.createIcons();
 
         let currentSlide = 0;
-        const totalSlides = 7;
+        const totalSlides = 9;
 
         function updateUI() {
             // Activar/Desactivar contenido de Diapositivas
@@ -395,6 +510,25 @@
 
         function prevSlide() {
             goToSlide(currentSlide - 1);
+        }
+
+        function switchScor(pilar) {
+            // Desactivar todas las pestañas de SCOR
+            document.querySelectorAll('.scor-tab').forEach(tab => {
+                tab.classList.remove('active', 'bg-indigo-600', 'text-white');
+                tab.classList.add('border-slate-700', 'text-slate-400');
+            });
+            // Ocultar descripciones de SCOR
+            document.querySelectorAll('.scor-desc').forEach(desc => {
+                desc.classList.add('hidden');
+            });
+
+            // Activar la seleccionada
+            const selectedTab = event.currentTarget;
+            selectedTab.classList.add('active', 'bg-indigo-600', 'text-white');
+            selectedTab.classList.remove('border-slate-700', 'text-slate-400');
+
+            document.getElementById('scor-content-' + pilar).classList.remove('hidden');
         }
 
         // Mapear flechas del teclado físico para navegación rápida
